@@ -1,0 +1,67 @@
+==============================================================================
+LOSO VALIDATION REPRODUCTION RUN
+Started: 2026-07-24T07:03:11.938186
+==============================================================================
+
+Config: window_ms=400 overlap=0.5 k_features=420 fs=1000 euclidean_alignment=False drop_unmarked=True
+Subjects requested: ['01', '02', '03', '04', '05', '06']
+Classifiers: ['lda']
+
+------------------------------------------------------------------------------
+LOADING DATA
+------------------------------------------------------------------------------
+  Subject 01: 42488 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 02: 41772 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 03: 38015 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 04: 41620 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 05: 39191 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 06: 38491 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+Loaded 6 subjects in 5.0s
+
+------------------------------------------------------------------------------
+RUNNING LOSO: LDA
+------------------------------------------------------------------------------
+Running LOSO with 6 subjects, window=400 samples, k=420
+Extracting features for all subjects...
+
+Fold 1/6: test = 01
+  Acc=19.43%, macro-F1=16.32%, active_acc=20.62%
+
+Fold 2/6: test = 02
+  Acc=19.81%, macro-F1=17.98%, active_acc=16.00%
+
+Fold 3/6: test = 03
+  Acc=26.98%, macro-F1=25.74%, active_acc=31.25%
+
+Fold 4/6: test = 04
+  Acc=15.46%, macro-F1=14.23%, active_acc=12.57%
+
+Fold 5/6: test = 05
+  Acc=22.68%, macro-F1=17.37%, active_acc=22.52%
+
+Fold 6/6: test = 06
+  Acc=24.08%, macro-F1=21.95%, active_acc=23.03%
+LDA LOSO complete in 45.3s
+  accuracy_mean=0.2141 accuracy_std=0.0404
+  macro_f1_mean=0.1893
+
+------------------------------------------------------------------------------
+STATISTICAL TESTS ACROSS CLASSIFIERS
+------------------------------------------------------------------------------
+Only one classifier run -- skipping Friedman/Wilcoxon (need >=2).
+
+Per-subject accuracy range by classifier:
+  LDA: min=0.155 max=0.270 range=0.115
+
+==============================================================================
+COMPARISON AGAINST README.md's CURRENT CLAIMS
+==============================================================================
+LDA: this run=21.41% (+/-4.04) vs README=69.03% (+/-9.81)  diff=-47.62pp
+  >>> DIVERGES by more than 5pp from the README claim.
+
+==============================================================================
+VERDICT: At least one classifier's accuracy diverges from the README by more than 5 percentage points. Update README.md's Scientific Validation section to match THIS run's numbers (and this log/JSON as the evidence), or investigate why before publishing either way.
+==============================================================================
+
+Log written to: /tmp/loso_results_fixed/loso_validation_20260724_070311.log
+JSON summary written to: /tmp/loso_results_fixed/loso_validation_20260724_070311.json

@@ -1,0 +1,56 @@
+==============================================================================
+LOSO VALIDATION REPRODUCTION RUN
+Started: 2026-07-24T07:04:20.401154
+==============================================================================
+
+Config: window_ms=400 overlap=0.5 k_features=420 fs=1000 euclidean_alignment=True drop_unmarked=True
+Subjects requested: ['01', '02', '03']
+Classifiers: ['lda']
+
+------------------------------------------------------------------------------
+LOADING DATA
+------------------------------------------------------------------------------
+  Subject 01: 42488 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 02: 41772 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+  Subject 03: 38015 samples, 8 channels, classes=['fist', 'radial_deviation', 'rest', 'ulnar_deviation', 'wrist_extension', 'wrist_flexion']
+Loaded 3 subjects in 2.3s
+
+------------------------------------------------------------------------------
+RUNNING LOSO: LDA
+------------------------------------------------------------------------------
+Running LOSO with 3 subjects, window=400 samples, k=420
+Extracting features for all subjects...
+
+Fold 1/3: test = 01
+  Acc=16.11%, macro-F1=14.46%, active_acc=11.25%
+
+Fold 2/3: test = 02
+  Acc=14.98%, macro-F1=14.27%, active_acc=17.14%
+
+Fold 3/3: test = 03
+  Acc=15.34%, macro-F1=14.13%, active_acc=17.36%
+LDA LOSO complete in 84.7s
+  accuracy_mean=0.1548 accuracy_std=0.0058
+  macro_f1_mean=0.1429
+
+------------------------------------------------------------------------------
+STATISTICAL TESTS ACROSS CLASSIFIERS
+------------------------------------------------------------------------------
+Only one classifier run -- skipping Friedman/Wilcoxon (need >=2).
+
+Per-subject accuracy range by classifier:
+  LDA: min=0.150 max=0.161 range=0.011
+
+==============================================================================
+COMPARISON AGAINST README.md's CURRENT CLAIMS
+==============================================================================
+NOTE: this run used 3 subjects; README claims n=6. Subject count alone can shift these numbers substantially -- treat any comparison below as indicative, not a strict apples-to-apples check.
+LDA: this run=15.48% (+/-0.58) vs README=69.03% (+/-9.81)  diff=-53.55pp
+  >>> DIVERGES by more than 5pp from the README claim.
+
+==============================================================================
+VERDICT: At least one classifier's accuracy diverges from the README by more than 5 percentage points. Update README.md's Scientific Validation section to match THIS run's numbers (and this log/JSON as the evidence), or investigate why before publishing either way.
+==============================================================================
+
+Log written to: /tmp/loso_ea_test/loso_validation_20260724_070420.log
+JSON summary written to: /tmp/loso_ea_test/loso_validation_20260724_070420.json

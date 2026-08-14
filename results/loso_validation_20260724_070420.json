@@ -1,0 +1,66 @@
+{
+  "timestamp": "20260724_070420",
+  "config": {
+    "data_dir": "<run-specific>",
+    "subjects": "01,02,03",
+    "classifiers": "lda",
+    "window_ms": 400,
+    "overlap": 0.5,
+    "k_features": 420,
+    "fs": 1000,
+    "no_euclidean_alignment": false,
+    "keep_unmarked": false,
+    "out_dir": "<run-specific>"
+  },
+  "subjects_loaded": [
+    "01",
+    "02",
+    "03"
+  ],
+  "results": {
+    "LDA": {
+      "accuracy_mean": 0.15477834943457583,
+      "accuracy_std": 0.005806497975741721,
+      "macro_f1_mean": 0.14289781058672038,
+      "per_fold_accuracy": [
+        0.16113744075829384,
+        0.1497584541062802,
+        0.15343915343915343
+      ]
+    }
+  },
+  "friedman": null,
+  "wilcoxon": null,
+  "per_subject_summary": {
+    "LDA": {
+      "min": 0.1497584541062802,
+      "max": 0.16113744075829384,
+      "mean": 0.15477834943457583,
+      "std": 0.004740985744356877,
+      "range_pp": 0.011378986652013645,
+      "min_subject_idx": 1,
+      "max_subject_idx": 0
+    }
+  },
+  "readme_claims": {
+    "n_subjects": 6,
+    "per_classifier": {
+      "XGBoost": {
+        "accuracy_mean": 0.7014,
+        "accuracy_std": 0.0881,
+        "macro_f1_mean": 0.6918
+      },
+      "LDA": {
+        "accuracy_mean": 0.6903,
+        "accuracy_std": 0.0981,
+        "macro_f1_mean": 0.6777
+      },
+      "RF": {
+        "accuracy_mean": 0.7059,
+        "accuracy_std": 0.1015,
+        "macro_f1_mean": 0.6958
+      }
+    },
+    "friedman_p": 0.6065
+  }
+}

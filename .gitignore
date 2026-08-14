@@ -1,0 +1,58 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+
+# ── Virtual environments ───────────────────────────────
+venv/
+.venv/
+env/
+
+# ── IDE / Editor ───────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Testing / Coverage ─────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Jupyter ────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Numba cache ────────────────────────────────────────
+__pycache__/*.nbi
+__pycache__/*.nbc
+
+# ── Data & Models (generated at runtime) ──────────────
+data/
+*.db
+*.sqlite3
+
+# ── ONNX models (exported) ────────────────────────────
+*.onnx
+
+# ── Environment ────────────────────────────────────────
+.env
+.env.local
+
+# ── Logs (machine-specific) ───────────────────────────
+*.log
+# Exception: results/*.log are intentional, documented evidence
+# (see results/README.md) — not machine-specific noise.
+!results/*.log
