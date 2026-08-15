@@ -1,6 +1,7 @@
 # MyoControl Suite v0.5 — Production-Ready EMG AI Platform
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21940052.svg)](https://doi.org/10.5281/zenodo.21940052)
+
 🚀 **[Live Interactive Demo](https://myocontrol-qussai-bme.streamlit.app/)** — try the classifier in your browser, no install needed## 🔧 Audit Log — bugs found and fixed
 
 This repository went through a thorough correctness audit (feature
