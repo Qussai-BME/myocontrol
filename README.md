@@ -1,8 +1,7 @@
 # MyoControl Suite v0.5 — Production-Ready EMG AI Platform
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21940052.svg)](https://doi.org/10.5281/zenodo.21940052)
-https://myocontrol-qussai-bme.streamlit.app/
-## 🔧 Audit Log — bugs found and fixed
+🚀 **[Live Interactive Demo](https://myocontrol-qussai-bme.streamlit.app/)** — try the classifier in your browser, no install needed## 🔧 Audit Log — bugs found and fixed
 
 This repository went through a thorough correctness audit (feature
 extraction, classifier training/explainability, edge deployment,
@@ -146,7 +145,7 @@ UCI dataset instead and does **not** correspond to this paper's claims —
 see the warning at the top of that script. NinaPro DB2/DB3/DB7 are
 available at http://ninaweb.hevs.ch (registration required); the
 paper's full code/data archive is at
-https://doi.org/10.5281/zenodo.20982280.
+https://doi.org/10.5281/zenodo.21940052.
 
 ### 🔍 Transparency (NEW)
 - **SHAP-based transparency reports** for every prediction
