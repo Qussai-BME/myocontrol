@@ -146,7 +146,7 @@ UCI dataset instead and does **not** correspond to this paper's claims —
 see the warning at the top of that script. NinaPro DB2/DB3/DB7 are
 available at http://ninaweb.hevs.ch (registration required); the
 paper's full code/data archive is at
-https://doi.org/10.5281/zenodo.21940052.
+https://doi.org/10.5281/zenodo.21940345.
 
 ### 🔍 Transparency (NEW)
 - **SHAP-based transparency reports** for every prediction
