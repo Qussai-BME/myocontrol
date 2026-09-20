@@ -1,4 +1,4 @@
-# MyoControl Suite v0.5 — Production-Ready EMG AI Platform
+# MyoControl Suite v0.5 — Research-grade EMG AI platform
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21940052.svg)](https://doi.org/10.5281/zenodo.21940052)
 
@@ -159,7 +159,6 @@ https://doi.org/10.5281/zenodo.21940345.
 - **Domain Adversarial Network**: 52,880 parameters (for the Quick Start example's config: n_features=308, n_classes=6, n_domains=10 — exact count scales with those, see `DANClassifier.count_parameters()`)
 - **Gradient Reversal Layer** for subject-invariant features
 - **CPU-only training**: 10 minutes on Intel Core i3 *(not independently re-timed in this audit — verify on your own target hardware before quoting this to anyone)*
-- **Expected LOSO improvement**: +15-25% over XGBoost baseline *("Expected" = a projection, not a measured result — no ablation for this exists yet, see paper §5.6/§5.7)*
 - **Requires PyTorch** (`pip install torch`) — there is no NumPy-only fallback; `DANClassifier` raises a clear `ImportError` at construction time if PyTorch isn't installed, rather than the confusing crash it used to produce
 
 ## 📦 New Files
